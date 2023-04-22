@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+
+        var url = "https://api.github.com/users"
+
+          async function abc () {
+
+                    var response = await fetch (url)  //fetch data from the url 
+                        var data = await response.json () // convert json into the  object
+                        
+                                console.table (data)
+
+                                // display avatar_UR link one by one
+
+                                        for (let i = 0; index < data.length; index++) {
+                                           document.write(data[i].avatar_url + "<br>") 
+                                        }
+
+            }
+
+
+
+
+
+
+
+    </script>
+
+    
+</body>
+</html>

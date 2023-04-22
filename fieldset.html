@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enter the Values</title>
+
+    <style>
+        input,
+        button {
+
+            padding: 10px;
+            height: 30px;
+
+        }
+
+        fieldset {
+            margin-bottom: 20px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <fieldset>
+
+        <legend>Insert the data </legend>
+        <input type="text" placeholder="Enter Key" id="inputkey">
+        <input type="text" placeholder="Enter value" id="inputvalue">
+        <button  onclick="display()" >Submit</button>
+
+        
+    </fieldset>
+
+    <fieldset>
+
+        <legend>Local Storage </legend>
+        <div id="output"></div>
+
+    </fieldset>
+    <script>
+
+        const inputkey= document.getElementById("inputkey")
+            const inputvalue = document.getElementById("inputvalue")
+                const output = document.getElementById("output")
+
+            function  display() {
+                
+                    const key1 = inputkey.value ;
+                        const value1 = inputvalue.value ;
+
+                        //  logic to store the data in local storage api 
+
+                        if (key1 && value1 ) {
+
+                            localStorage.setItem (key1,value1)
+                                location.reload  ();   
+
+                        }   // function close
+                    }
+                            for (let index = 0; index < localStorage.length; index++) {
+                                
+                                const key2 =localStorage.key(index) ;
+                                        const value2 = localStorage.getItem(key2)
+                                                output.innerHTML +="" + key2 + ":" + value2 + "<br>" 
+                                
+                            }
+
+            
+
+    </script>
+
+
+
+
+
+
+</body>
+
+</html>

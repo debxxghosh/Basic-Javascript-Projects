@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <style>
+        * {
+
+            background-color: beige;
+        }
+
+        #myinput {
+            width: 100%;
+            background-color: azure;
+            border: 2px solid;
+        }
+
+        th {
+            width: 500px;
+            background-color: rgb(152, 152, 226);
+            border: 2px;
+        }
+
+
+        td tr {
+            color: #000;
+            width: 500px;
+            border: 2px solid;
+            text-align: center;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <input type="text" id="myinput" onkeyup="display()"> 
+    <br>
+    <button class="btn btn-outline-success " type="submit">Search</button>
+    <br> <br>
+     <table id="mytable">
+
+        <tr class="header">
+
+            <th> Name </th>
+            <th> Degree</th>
+            <th> Profession </th>
+        </tr>
+        <tr>
+          <td>Batman</td>
+            <td>Malware</td>
+            <td>Data Breach</td>
+        </tr>
+        <tr>
+            <td>Che Guevera</td>
+            <td>Communist</td>
+            <td>Nihilism</td>
+        </tr>
+        <tr>
+            <td> Obama </td>
+            <td> President </td>
+            <td> Imposter </td>
+        </tr>
+    </table>
+    <script>
+
+        function display() {
+
+            filter = document.getElementById("my input").value.toUpperCase();
+            table = document.getElementById("my table");
+            tablerow = table.getElementsByTagName('tr');
+
+            for (i = 1; i < table.row.length; i++) {
+
+                tabledata = tablerow[i].getElementsByTagName('td')[0];
+
+                if (tabledata) {
+
+                    data = tabledata.innerHTML
+
+                    if (data.toUpperCase().indexOf(filter) > -1);
+
+                    tablerow[i].style.display = ""
+
+                }
+                else {
+
+                    tablerow[i].style.display = "none"
+                }
+
+            }
+
+        }
+
+    </script>
+
+</body>
+
+</html>

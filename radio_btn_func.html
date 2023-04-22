@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+   <h1> Select scriting Language</h1>
+   <input type="radio" name ="r1" id = "input1">  HTML
+   <br> <br>
+        <input type="radio" name ="r3" id = "input2"> CSS
+   <br> <br>
+
+   <input type="radio" name ="r4" id = "input3"> javascript
+   <br> <br>
+
+   <input type="radio" name ="r1" id = "input4"> JAVA
+   <br> <br>
+
+<button onclick="vali()" >   submit  </button>
+<script>
+
+        function vali () {
+            
+              var x1=  document.getElementById(  "input1" )
+                   var x2 =  document.getElementById ("input2") 
+                        var x3 = document.getElementById("input3")
+
+                if ( x1.checked == true) {
+
+                        alert ("answer selected as HTML")
+                
+                }
+
+                    else if ( x2.checked == true ) {
+                        alert ( "answer selected as CSS"  )
+                    }
+
+             else {
+                alert("no answer is selected")
+             }       
+
+        }
+
+        
+
+</script>
+
+
+
+</body>
+</html>

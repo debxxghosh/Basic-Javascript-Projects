@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+    border: 2px solid;
+    width: 50%;
+    margin: auto;
+    text-align: center;
+    background-color: antiquewhite;
+    padding: 10px;
+}
+
+h1 {
+  
+    font-style: italic;
+    background-color: rgb(147, 239, 175);
+}
+    </style>
+</head>
+
+<body>
+    <div>
+        <h1 id="heading"></h1>
+        <h2 id="heading"></h2>
+        <h2 id="heading"></h2>
+
+
+        <button onclick="inc()">inc</button>
+
+        <button onclick="dec()">dec</button>
+
+        <button onclick="res()">res</button>
+    </div>
+
+</body>
+</head>
+
+<body>
+  
+
+    <script>
+
+        count = 0;
+
+        function inc() {
+
+            count = count + 1;
+
+            document.getElementById("heading").innerHTML = count;
+
+        }
+
+        function dec() {
+
+            count = count - 1;
+
+            document.getElementById("heading").innerHTML = count;
+
+        }
+
+        function res() {
+
+            count = 0;
+
+            document.getElementById("heading").innerHTML = count;
+
+        }
+
+
+    </script>
+
+
+
+
+</body>
+
+</html>

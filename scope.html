@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+<script>
+
+    var  x = 100 ;           // global variable 
+    
+       let x1 = 300 ;       // global variable 
+        const x3 = 400 ;         // global variable 
+
+        function xyz () {
+
+        document.write ( "inside the function" + x + "<br>"   )     //   x this is a local variable
+        document.write ( "inside the function" + x1 + "<br>"   )    //    x1 this is a local variable
+        document.write ( "inside the function" + x3 + "<br>"   )    //  x3 this is a local variable
+                                                                            // ( inside the scope  )
+        }
+
+        xyz() ;  // function call 
+        
+        document.write ( x + "<br>"   )        //   x this is a global  variable
+        document.write ( x1 + "<br>"   )       //    x1 this is a  global variable
+        document.write ( x3 + "<br>"   )        //   x3 this is a global  variable
+
+                                                // ( outside the scope  )
+
+
+    for (let i = 0; i < array.length; i++) {
+        const element = array[i];
+        
+    }
+
+
+
+
+
+</script>
+
+
+
+</body>
+</html>

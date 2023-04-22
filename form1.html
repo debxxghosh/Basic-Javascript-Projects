@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <form action="index.html" onsubmit="return  vali() ">
+
+        <fieldset>
+
+            <legend>Fill the form </legend>
+            <p>Username <input type="text" placeholder="Enter name"></p>
+            <p>Email <input type="email" placeholder=" e.gxxx@gmail"></p>
+            <p>Password <input type="password"  placeholder="Password"    > </p>
+            <p>Confirm Password <input type="Confirm password" placeholder="Confirm Password"  > </p>
+            <p>
+                <input type="checkbox" id="agree">
+                <label for="agree"> I am not a robot </label>
+            </p>
+            <input type="Submit" value="Register" id="register" disabled>
+
+        </fieldset>
+
+    </form>
+
+    <script>
+
+        var agree = document.getElementById("agree")
+        agree.addEventListener('change', () =>{
+
+            let register = document.getElementById("register") 
+                                if (agree.checked) {
+            register.removeAttribute("disabled")
+        }
+        else {
+            register.setAttribute("disabled", "disabled")
+
+        }})
+
+    </script>
+
+</body>
+
+</html>

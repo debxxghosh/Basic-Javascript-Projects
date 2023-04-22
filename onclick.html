@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+        <h1  id = "blue">1. De-Bruyne (11)   </h1>
+        <h1  class = "orange">2. Bellingham (18)     </h1>
+        <h1  class = "orange">3. Harry Kane (9)      </h1>
+        <h1  class = "orange">4.  Van-persie (5)    </h1>
+        <h1  id = "blue">5. kylian Embappe (10)    </h1>
+
+            <button  onclick="show()" > Green </button>
+
+<body>
+    
+               <script>
+
+                            function show() {
+
+                                var x = document.getElementsByClassName("orange")
+
+                                        for (let index = 0; index < x.length; index++) {
+                                            x[index].style.color = "Green"  
+
+                                            
+                                        }
+                            }
+
+               </script>
+
+
+</body>
+</html>

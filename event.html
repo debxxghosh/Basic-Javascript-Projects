@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+      <button onclick="display()" >Click here</button>
+            <button id = "btn"> click me    </button>   
+                 
+            <!-- target by id  -->
+
+
+        <script>
+
+                function display( ){
+
+                            alert ("event function")
+                }
+
+               var x =  document.getElementById("btn")
+                    x.onclick = display // dont write the function notation for event  
+
+                    // syntax : target_element.event = handler_function   
+
+                            x.onclick=()=> alert("event function")
+
+        </script>
+
+
+</body>
+</html>

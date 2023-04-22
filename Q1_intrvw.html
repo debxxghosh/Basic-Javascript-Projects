@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+        <script>
+
+
+function ArrayAddition(arr) {
+  // Find the largest number in the array
+  var max = Math.max.apply(null, arr);
+  
+  // Remove the largest number from the array
+  var arrWithoutMax = arr.filter(function(element) {
+    return element != max;
+  });
+  
+  // Calculate the sum of all possible combinations of numbers in the array without the largest number
+  var sumCombinations = arrWithoutMax.reduce(function(acc, cur) {
+    return acc.concat(acc.map(function(element) {
+      return element + cur;
+    }));
+  }, [0]);
+  
+  // Check if the sum of any combination equals the largest number
+  return sumCombinations.includes(max);
+}
+
+// Example usage
+console.log(ArrayAddition([4, 6, 23, 10, 1, 3])); // true
+console.log(ArrayAddition([5, 7, 16, 1, 2])); // false
+console.log(ArrayAddition([3, 5, -1, 8, 12])); // true
+
+
+
+
+</script>
+
+</body>
+</html>
